@@ -12,21 +12,41 @@ and "" would be "a blank string"
 
 1a) :crocodile
 
+a symbol
+
 1b) "145.73"
+
+A string containing a  the number 145.73
 
 1c) { :coffee => "cafe" }
 
+a hash with a key of :coffee and a value of “cafe”
+
 1d) [ :green, :eggs, :ham ]
 
+an array with the following symbols :green, :eggs, :ham
+
 1e) ["tea", {"juice" => "orange"}]
+
+An array containing a string as the first element and the second element is a hash with one element
 
 2) Here is an array:
 array = ["Molly", "Greg", "Taz"]
 Write a line of ruby that appends the values "Jay" and "Mona" to the array.
 
+array << “Jay”
+==> [“Molly", "Greg", "Taz”, “Jay”] 
+
+array << “Mona”
+==> [“Molly", "Greg", "Taz”, “Jay”, “Mona”] 
+
+
 3) Here is a hash:
 hash = { :cow => "Moo", :sheep => "Baah" }
 Write a line of ruby that replaces the value of the key :sheep with "Bleat".
+
+hash[:sheep] = “Bleat”
+==> hash = { :cow => "Moo", :sheep => "Bleat" }
 
 4) The file number_converter.rb contains a method called convert_number that doesn't do anything.
 
@@ -36,7 +56,22 @@ Replace the #??? comment inside it so that:
 
 5) Write a method that takes one argument (an array full of strings) and `puts` each word separately, but in uppercase.
 
+strings = [ “h”, “array”, “bang”]
+
+def output_uppercased_letters(strings)
+ strings.each do |string|
+  puts string.upcase
+ end
+end
+
+output_uppercased_letters(strings)
+==> [ “H”, “ARRAY”, “BANG”]
+
+
 6) What's the difference between an object and an instance?
+
+An object is representation of thing in the world and an instance is the individual representation for example we have a car object this can have many instances for example a ford card which is red.
+
 
 Testing
 -------
@@ -48,6 +83,9 @@ c) Write a test that checks calculate(5, 'horse') returns 5.
 
 8) Explain the difference between the rspec methods let and subject.
 
+subject refers to the object main object your testing and let refers to the other objects which are in the tests for example your testing a User spec so the subject would be the User and 
+there’s also subscribers so within the it would be let(:subscriber) { Subscriber.new }, let can also be used to test additional variables for example you want to change the name of the user for one test.
+
 HTML, CSS and Javascript
 ------------------------
 
@@ -56,25 +94,39 @@ a) what is HTML?
 b) what is CSS?
 c) what is Javascript?
 
+HTML provides structure to a webpage by allowing developers to use html elements to build a webpage, css provides the styling of html document for example the Headings colour, the styling of the words etc.. Javascript gives a webpage the behaviour according to events it listens to for example when a user clicks an image which fires off an event such as resizing the image.
+
 9) State if the following lines are HTML, CSS,or Javascript:
 
 a) <p>Lorem Ipsum</p>
+HTML
 
 b) console.log("Some words");
+Javascript
 
 c) p { background-color: yellow }
+CSS
 
 d) <table width="50%"></table>
+HTML and inline CSS
+
 
 e) <div id="index" class="small left"></div>
+HTML
 
 10) Describe the following Javascript objects, like you did for the first question:
 
 10a) 100.26
+A number object with the number 100.26
 
 10b) "Hello"
+A string object with the string hello enclosed. 
 
 10c) [ "a", 4, null ]
 
+an array object containing the following elements a string as the first element, a number as the second object and a null as the third object.
+
 10d) { height: "180cm" }
+
+a hash object containing a height key and a value string object “180cm”
 
